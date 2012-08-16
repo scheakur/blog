@@ -5,13 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blog Archive - Rock'n'Roll Parachute</title>
+  <title>$PATH variable in Gvim - Rock'n'Roll Parachute</title>
   <meta name="author" content="scheakur">
 
   
-  <meta name="description" content=" Blog Archive 2012 $PATH variable in Gvim
-Aug 17 2012 posted in vim Hello Octpress
-Aug 16 2012 Recent Posts $PATH variable in Gvim Hello Octpress ">
+  <meta name="description" content="ターミナルの中で起動した vim と、直接起動した gvim で、 1
+!ruby --version の結果が異なっていたのをなんとかしようと思いました。
+結論から言えば、.profile に $PATH の記述を移すことで解決しました。ちなみにぼくは bash を使っています。zsh &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +20,7 @@ Aug 16 2012 Recent Posts $PATH variable in Gvim Hello Octpress ">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://code.scheakur.com/blog/blog/archives/">
+  <link rel="canonical" href="http://code.scheakur.com/blog/blog/2012/08/17/path-variable-in-gvim/">
   <link href="/blog/favicon.png" rel="icon">
   <link href="/blog/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/blog/javascripts/modernizr-2.0.js"></script>
@@ -65,45 +65,92 @@ Aug 16 2012 Recent Posts $PATH variable in Gvim Hello Octpress ">
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Blog Archive</h1>
+    
+      <h1 class="entry-title">$PATH Variable in Gvim</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-17T00:45:00+09:00" pubdate data-updated="true">Aug 17<span>th</span>, 2012</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives">
 
 
+<div class="entry-content"><p>ターミナルの中で起動した vim と、直接起動した gvim で、</p>
 
-  
-  <h2>2012</h2>
-
-<article>
-  
-<h1><a href="/blog/blog/2012/08/17/path-variable-in-gvim/">$PATH variable in Gvim</a></h1>
-<time datetime="2012-08-17T00:45:00+09:00" pubdate><span class='month'>Aug</span> <span class='day'>17</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/blog/categories/vim/'>vim</a></span>
-</footer>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>!ruby --version
+</span></code></pre></td></tr></table></div></figure>
 
 
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/blog/2012/08/16/hello-octopress/">Hello Octpress</a></h1>
-<time datetime="2012-08-16T19:16:00+09:00" pubdate><span class='month'>Aug</span> <span class='day'>16</span> <span class='year'>2012</span></time>
-
-
-</article>
-
+<p>の結果が異なっていたのをなんとかしようと思いました。
+結論から言えば、.profile に $PATH の記述を移すことで解決しました。ちなみにぼくは bash を使っています。zsh を使っている人は .zshenv に書いておくといいらしいです。確認してないですけど。</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">scheakur</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-17T00:45:00+09:00" pubdate data-updated="true">Aug 17<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/blog/categories/vim/'>vim</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://code.scheakur.com/blog/blog/2012/08/17/path-variable-in-gvim/" data-via="" data-counturl="http://code.scheakur.com/blog/blog/2012/08/17/path-variable-in-gvim/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/blog/2012/08/16/hello-octopress/" title="Previous Post: Hello Octpress">&laquo; Hello Octpress</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>

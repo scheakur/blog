@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: vim | Rock'n'Roll Parachute]]></title>
+  <link href="http://code.scheakur.com/blog/blog/categories/vim/atom.xml" rel="self"/>
+  <link href="http://code.scheakur.com/blog/"/>
+  <updated>2012-08-17T01:13:46+09:00</updated>
+  <id>http://code.scheakur.com/blog/</id>
+  <author>
+    <name><![CDATA[scheakur]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[$PATH variable in Gvim]]></title>
+    <link href="http://code.scheakur.com/blog/blog/2012/08/17/path-variable-in-gvim/"/>
+    <updated>2012-08-17T00:45:00+09:00</updated>
+    <id>http://code.scheakur.com/blog/blog/2012/08/17/path-variable-in-gvim</id>
+    <content type="html"><![CDATA[<p>ターミナルの中で起動した vim と、直接起動した gvim で、
+<code>sh
+!ruby --version
+</code>
+の結果が異なっていたのをなんとかしようと思いました。
+結論から言えば、.profile に $PATH の記述を移すことで解決しました。ちなみにぼくは bash を使っています。zsh を使っている人は .zshenv に書いておくといいらしいです。確認してないですけど。</p>
+]]></content>
+  </entry>
+  
+</feed>

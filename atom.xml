@@ -4,7 +4,7 @@
   <title><![CDATA[Rock'n'Roll Parachute]]></title>
   <link href="http://code.scheakur.com/blog/atom.xml" rel="self"/>
   <link href="http://code.scheakur.com/blog/"/>
-  <updated>2012-08-16T19:30:17+09:00</updated>
+  <updated>2012-08-17T01:13:46+09:00</updated>
   <id>http://code.scheakur.com/blog/</id>
   <author>
     <name><![CDATA[scheakur]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[$PATH variable in Gvim]]></title>
+    <link href="http://code.scheakur.com/blog/blog/2012/08/17/path-variable-in-gvim/"/>
+    <updated>2012-08-17T00:45:00+09:00</updated>
+    <id>http://code.scheakur.com/blog/blog/2012/08/17/path-variable-in-gvim</id>
+    <content type="html"><![CDATA[<p>ターミナルの中で起動した vim と、直接起動した gvim で、</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>!ruby --version
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>の結果が異なっていたのをなんとかしようと思いました。
+結論から言えば、.profile に $PATH の記述を移すことで解決しました。ちなみにぼくは bash を使っています。zsh を使っている人は .zshenv に書いておくといいらしいです。確認してないですけど。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Hello Octpress]]></title>

@@ -9,8 +9,9 @@
   <meta name="author" content="scheakur">
 
   
-  <meta name="description" content="Octopress を使ってみるけどいまいち使いこなしている感が得られなくて悲しい。とりあえずテーマを作るところからはじめるかな。
-">
+  <meta name="description" content="ターミナルの中で起動した vim と、直接起動した gvim で、 1
+!ruby --version の結果が異なっていたのをなんとかしようと思いました。
+結論から言えば、.profile に $PATH の記述を移すことで解決しました。ちなみにぼくは bash を使っています。zsh &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -71,6 +72,50 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/blog/2012/08/17/path-variable-in-gvim/">$PATH Variable in Gvim</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-17T00:45:00+09:00" pubdate data-updated="true">Aug 17<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>ターミナルの中で起動した vim と、直接起動した gvim で、</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>!ruby --version
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>の結果が異なっていたのをなんとかしようと思いました。
+結論から言えば、.profile に $PATH の記述を移すことで解決しました。ちなみにぼくは bash を使っています。zsh を使っている人は .zshenv に書いておくといいらしいです。確認してないですけど。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/blog/2012/08/16/hello-octopress/">Hello Octpress</a></h1>
     
     
@@ -113,6 +158,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/blog/2012/08/17/path-variable-in-gvim/">$PATH variable in Gvim</a>
+      </li>
     
       <li class="post">
         <a href="/blog/blog/2012/08/16/hello-octopress/">Hello Octpress</a>

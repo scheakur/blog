@@ -4,7 +4,7 @@
   <title><![CDATA[Rock'n'Roll Parachute]]></title>
   <link href="http://code.scheakur.com/blog/atom.xml" rel="self"/>
   <link href="http://code.scheakur.com/blog/"/>
-  <updated>2012-08-17T01:13:46+09:00</updated>
+  <updated>2012-08-26T17:11:15+09:00</updated>
   <id>http://code.scheakur.com/blog/</id>
   <author>
     <name><![CDATA[scheakur]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[1Password を Linux 上で使う]]></title>
+    <link href="http://code.scheakur.com/blog/blog/2012/08/26/use-1password-on-linux/"/>
+    <updated>2012-08-26T16:24:00+09:00</updated>
+    <id>http://code.scheakur.com/blog/blog/2012/08/26/use-1password-on-linux</id>
+    <content type="html"><![CDATA[<p><a href="http://help.agilebits.com/1Password3/1passwordanywhere.html">1PasswordAnywhere</a> を使います。
+使うと言っても単にパスワードを参照するだけの使い方で、パスワードを登録する方には使えません。</p>
+
+<h2>前提</h2>
+
+<p>1Password のデータファイルが Dropbox に置いてあるのが前提です。</p>
+
+<h2>Dropbox のウェブ UI 上から使う</h2>
+
+<p><code>1Password.agilekeychain/1Password.html</code> というファイルがどこかにあるので、それを Dropbox のウェブ UI 上から開くと 1Password の画面が開けます。
+あとは Mac で使っているときと同じようにマスターパスワードを入力すればパスワードなどを参照することができます。</p>
+
+<h2>ローカルのファイルを使う</h2>
+
+<p>わざわざ Dropbox のウェブサイトから開かなくてもローカルにあるファイルを開いちゃだめなの？ と思う方も多いでしょうが、セキュリティ上の理由から最近のブラウザでは開けなくなっています（ローカルの html ファイルの中からさらに別のローカルにあるファイルを XMLHttpRequest で読み込むことができません）。
+そうはいっても、ぼくの場合 Dropbox にログインするためのパスワードも 1Password で管理していて、Dropbox にログインするためには 1Password が必要で、1Password を使うためには Dropbox が必要というデッドロック状態になっています。通常は、iPhone なり、Mac なりでパスワードを表示させておいてそれを手打ちするというクソみたいな作業を行っていますが、さすがにそれは最初の1回（1Password のクライアントアプリをインストールする初回）だけです。
+1Password を使うたびにそんなクソみたいな行為はしたくありません。</p>
+
+<p>やはりローカルのファイルを使います。
+ブラウザは chromium-browser です。
+google-chrome じゃないのは気分の問題です。</p>
+
+<p>前出のローカルファイルから XMLHttpRequest で他のローカルファイルを開けない問題は <code>--allow-file-access-from-files</code> というオプションで回避できます。あと、既存の chromium-browser のウィンドウに新しいタブで開いても <code>--allow-file-access-from-files</code> は有効にならないので、一時プロファイルを作成して利用する <code>--temp-profile</code> オプションをつけます。
+あとは気分の問題からシークレットモードにするための <code>--incognito</code> もつけています。
+気分の問題は重要です。
+結局以下のようなコマンドを実行すればローカルのファイルを使って 1Password の画面が開けます。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>chromium-browser --temp-profile --allow-file-access-from-files --incognito /path/to/1Password.agilekeychain/1Password.html
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>よくわからないのですが、これらのオプションの順番を入れ替えたりするとなぜかうまく動作しません。とりあえず上記の順番でオプションを記述すればすべてうまく動いてくれました。</p>
+
+<p>あとは適当に alias をつくるなり、適当なスクリプトファイルにするなり、あるいは Chromium の <code>Create Application Shortcut</code> を使ってショートカットを作るなりすればいいと思います。
+<code>Create Application Shortcut</code> で作成されたショートカットコマンドには <code>--allow-file-access-from-files</code> オプションが含まれていないので、ショートカット作成後あらためて追加する必要があるので注意してください。</p>
+
+<p>それでは Linux 上でも 1Password を使って快適なインターネットライフをお楽しみください。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[$PATH variable in Gvim]]></title>
